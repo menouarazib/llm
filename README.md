@@ -6,9 +6,9 @@ Each notebook provides a detailed walkthrough of the fine-tuning process, includ
 
 The fine-tuning techniques used in this repository include:
 
-- [LoRA Adapter](https://github.com/Adapter-Hub/adapter-transformers): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
-- [Flash Attention](https://arxiv.org/abs/2103.05574): A novel attention mechanism that reduces the complexity of self-attention.
-- [Quantization](https://pytorch.org/docs/stable/quantization.html): A technique to reduce the memory footprint and improve the computational efficiency of the model.
+- [LoRA Adapter](https://huggingface.co/papers/2305.14314): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
+- [Flash Attention](https://huggingface.co/docs/text-generation-inference/conceptual/flash_attention): A novel attention mechanism that reduces the complexity of self-attention.
+- [Quantization](https://huggingface.co/docs/transformers/main/en/quantization): A technique to reduce the memory footprint and improve the computational efficiency of the model.
 - [Train on Completions Only using DataCollatorForCompletionOnlyLM](https://huggingface.co/transformers/main_classes/data_collator.html): A specific data collator for language model pretraining.
 
 Stay tuned for updates as we continue to add more models and improve our fine-tuning techniques.
