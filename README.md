@@ -4,6 +4,13 @@ This repository contains multiple Jupyter notebooks used for fine-tuning various
 
 Each notebook provides a detailed walkthrough of the fine-tuning process, including data preprocessing, model training, and evaluation. They serve as comprehensive guides for those interested in understanding and applying LLMs in their projects.
 
+The fine-tuning techniques used in this repository include:
+
+- [LoRA Adapter](https://github.com/Adapter-Hub/adapter-transformers): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
+- [Flash Attention](https://arxiv.org/abs/2103.05574): A novel attention mechanism that reduces the complexity of self-attention.
+- [Quantization](https://pytorch.org/docs/stable/quantization.html): A technique to reduce the memory footprint and improve the computational efficiency of the model.
+- [Train on Completions Only using DataCollatorForCompletionOnlyLM](https://huggingface.co/transformers/main_classes/data_collator.html): A specific data collator for language model pretraining.
+
 Stay tuned for updates as we continue to add more models and improve our fine-tuning techniques.
 
 **You can access my Hugging Face account [here](https://huggingface.co/Menouar)**
