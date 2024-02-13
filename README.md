@@ -19,4 +19,4 @@ The fine-tuning techniques used in this repository include:
 
 Stay tuned for updates as we continue to add more models and improve our fine-tuning and RAG techniques.
 
-**You can access my Hugging Face account [here](https://huggingface.co/Menouar)**
+**You can access my Hugging Face account [here](https://huggingface.co/Menouar).**
