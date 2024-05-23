@@ -1,7 +1,7 @@
 # Efficient Fine-Tuning of Open Source Language Learning Models (LLMs) Repository
 
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/menouarazib/llm/b1bcf64094ae6228f5269030e469f8ea47c97945/finetuning_llms.jpg" width="800">
+<img src="https://raw.githubusercontent.com/menouarazib/llm/7d1aeb95fa034ddbbaecfe988a8988331c2770f3/finetuning_llms.jpg" width="800">
 </h1><br>
 
 This repository contains multiple Jupyter notebooks used for fine-tuning or RAG various Language Learning Models (LLMs). The models include but are not limited to, Falcon7B, Phi-2, and Zephyr7B.
