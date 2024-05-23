@@ -8,6 +8,21 @@ This repository contains multiple Jupyter notebooks used for fine-tuning or RAG 
 
 Each notebook provides a detailed walkthrough of the fine-tuning or RAG process, including data preprocessing, model training, and evaluation. They serve as comprehensive guides for those interested in understanding and applying LLMs in their projects.
 
+Here are the major steps involved in each notebook:
+- **Set Up the Development Environment:** Prepare the necessary software and libraries for the project.
+- **Load and Prepare the Dataset:** Import the dataset and preprocess it for the model.
+- **Load the Base Model:** Load the model for fine-tuning.
+- **Fine-Tune the LLM:** Adjust the LLM model parameters on our dataset.
+- **Push the Fine-Tuned Model to the Hugging Face Hub.**
+
+## The Efficient Techniques Used Are:
+### Quantization
+The quantization process involves loading the base model with lower precision. For example, if the base model weights are stored in 32-bit floating points and we decide to quantize them to 16-bit floating points, then the model size is divided by two. This makes it easier to store and reduces its memory usage. It can also speed up inference because it takes less time to perform calculations with fewer bits.
+
+
+
+
+
 The fine-tuning techniques used in this repository include:
 
 - [LoRA Adapter](https://huggingface.co/papers/2305.14314): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
