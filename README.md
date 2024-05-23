@@ -1,4 +1,4 @@
-# Efficient FineTuning of open source Language Learning Models (LLMs) Repository
+# Efficient Fine-Tuning of Open Source Language Learning Models (LLMs) Repository
 
 <h1 align="center">
 <img src="https://raw.githubusercontent.com/menouarazib/llm/b1bcf64094ae6228f5269030e469f8ea47c97945/finetuning_llms.jpg" width="800">
