@@ -4,9 +4,9 @@
 <img src="https://raw.githubusercontent.com/menouarazib/llm/7d1aeb95fa034ddbbaecfe988a8988331c2770f3/finetuning_llms.jpg" width="800">
 </h1><br>
 
-This repository contains multiple Jupyter notebooks used for fine-tuning or RAG various Language Learning Models (LLMs). The models include but are not limited to, Falcon7B, Phi-2, and Zephyr7B.
+This repository contains multiple Jupyter notebooks used for fine-tuning open source Language Learning Models (LLMs). The models include but are not limited to, Gemma, Falcon7B, Phi-2, and Zephyr7B.
 
-Each notebook provides a detailed walkthrough of the fine-tuning or RAG process, including data preprocessing, model training, and evaluation. They serve as comprehensive guides for those interested in understanding and applying LLMs in their projects.
+Each notebook provides a detailed walkthrough of the fine-tuning, including data preprocessing, and model training. They serve as comprehensive guides for those interested in understanding and applying LLMs in their projects.
 
 Here are the major steps involved in each notebook:
 - **Set Up the Development Environment:** Prepare the necessary software and libraries for the project.
