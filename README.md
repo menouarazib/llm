@@ -17,6 +17,23 @@ Here are the major steps involved in each notebook:
 
 ## The Efficient Techniques Used Are:
 ### Quantization
+Quantization is the process of constraining an input from a continuous (large set of values) to a discrete set.
+
+Mathematically, for linear quantization from floating points to integers, we can write the equation as:
+
+$$ r = (q - Z) * S $$
+
+Where:
+- r: Floating-point
+- q: Integer
+- Z: Zero point
+- S: Scale
+
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/menouarazib/llm/7d1aeb95fa034ddbbaecfe988a8988331c2770f3/finetuning_llms.jpg" width="800">
+</h1><br>
+
+
 The quantization process involves loading the base model with lower precision. For example, if the base model weights are stored in 32-bit floating points and we decide to quantize them to 16-bit floating points, then the model size is divided by two. This makes it easier to store and reduces its memory usage. It can also speed up inference because it takes less time to perform calculations with fewer bits.
 
 
