@@ -21,17 +21,17 @@ Quantization is the process of constraining an input from a continuous (large se
 
 Mathematically, for linear quantization from floating points to integers, we can write the equation as:
 
-$$ r = (q - Z) * S $$
+$$ r = (q - Z) \times S $$
 
 Where:
-- r: Floating-point
-- q: Integer
-- Z: Zero point
-- S: Scale
+- $r:$ Floating-point
+- $q:$ Integer
+- $Z:$ Zero point
+- $S:$ Scale
 - $r_{max}:$ maximum float in Tensor
 - $r_{min}:$ minimum float in Tensor
-- $q_{max}:$ maximum integer (N bits, $2^{N-1} -1$)
-- $q_{min}:$ minimum integer (N bits, $-2^{N-1}$)
+- $q_{max}:$ maximum integer ($N$ bits, $2^{N-1} -1$)
+- $q_{min}:$ minimum integer ($N$ bits, $-2^{N-1}$)
 
 
 <h1 align="center">
