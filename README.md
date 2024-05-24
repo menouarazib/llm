@@ -30,9 +30,8 @@ Where:
 - S: Scale
 
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/menouarazib/llm/7d1aeb95fa034ddbbaecfe988a8988331c2770f3/finetuning_llms.jpg" width="800">
+<img src="https://raw.githubusercontent.com/menouarazib/llm/bb58c13bf0725015feba8efabc15ef17bfec105f/quantization.PNG" width="800">
 </h1><br>
-
 
 The quantization process involves loading the base model with lower precision. For example, if the base model weights are stored in 32-bit floating points and we decide to quantize them to 16-bit floating points, then the model size is divided by two. This makes it easier to store and reduces its memory usage. It can also speed up inference because it takes less time to perform calculations with fewer bits.
 
