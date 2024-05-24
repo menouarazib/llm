@@ -19,7 +19,7 @@ Here are the major steps involved in each notebook:
 ### Quantization
 Quantization is the process of constraining an input from a continuous (large set of values) to a discrete set.
 
-Mathematically, for linear quantization from floating points to integers, we can write the equation as:
+Mathematically, a linear quantization is an affine mapping of integers to floating points, we can write the equation as:
 
 $$ r = (q - Z) \times S $$
 
