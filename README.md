@@ -28,10 +28,23 @@ Where:
 - q: Integer
 - Z: Zero point
 - S: Scale
+- $r_{max}:$ maximum float in Tensor
+- $r_{min}:$ minimum float in Tensor
+- $q_{max}:$ maximum integer (N bits, $2^{N-1} -1$)
+- $q_{min}:$ minimum integer (N bits, $-2^{N-1}$)
+
 
 <h1 align="center">
 <img src="https://raw.githubusercontent.com/menouarazib/llm/bb58c13bf0725015feba8efabc15ef17bfec105f/quantization.PNG" width="800">
-</h1><br>
+  
+[TinyML and Efficient Deep Learning Computing, Song Han]
+</h1><be>
+
+$$ S = \dfrac{r_{max} - r_{min}}{q_{max} - q_{min}}$$
+
+$$ Z = q_{min} - \dfrac{r_{min}}{S} $$
+
+$$ Z = round(q_{min} - \dfrac{r_{min}}{S}) $$
 
 The quantization process involves loading the base model with lower precision. For example, if the base model weights are stored in 32-bit floating points and we decide to quantize them to 16-bit floating points, then the model size is divided by two. This makes it easier to store and reduces its memory usage. It can also speed up inference because it takes less time to perform calculations with fewer bits.
 
