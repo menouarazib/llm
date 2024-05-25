@@ -46,7 +46,10 @@ $$ Z = q_{min} - \dfrac{r_{min}}{S} $$
 
 $$ Z = round(q_{min} - \dfrac{r_{min}}{S}) $$
 
-The quantization process involves loading the base model with lower precision. For example, if the base model weights are stored in 32-bit floating points and we decide to quantize them to 16-bit floating points, then the model size is divided by two. This makes it easier to store and reduces its memory usage. It can also speed up inference because it takes less time to perform calculations with fewer bits.
+The basic concept of **neural network quantization** is converting the weights and activations of a neural network into a limited discrete set of numbers.
+The most well-known quantization methods are:
+- **Post-Training Quantization (PTQ)**: The quantization is done after the model is trained.
+- **Quantization Aware Training (QAT)**: The quantization is applied to the model, and then it is retrained or fine-tuned.
 
 
 
