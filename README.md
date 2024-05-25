@@ -51,8 +51,11 @@ The most well-known quantization methods are:
 - **Post-Training Quantization (PTQ)**: The quantization is done after the model is trained.
 - **Quantization Aware Training (QAT)**: The quantization is applied to the model, and then it is retrained or fine-tuned.
 
-
-
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/menouarazib/llm/6775596f83879183c2079f9215352a434b11d98e/PQT%20-%20QAT.png" width="800">
+  
+[Olivia Weng]
+</h1><be>
 
 
 The fine-tuning techniques used in this repository include:
