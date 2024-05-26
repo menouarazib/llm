@@ -57,6 +57,25 @@ The most well-known quantization methods are:
 [Olivia Weng]
 </h1><be>
 
+In our notebooks, we are using **QAT** quantization using **bitsandbytes**.
+
+## LoRA
+For efficient **fine-tuning**, we are using the **Lasso** technique known as **LoRA** which focuses only on training the adapters rather than the entire model. These adapters are two low-rank matrices **A** and **B**. The idea came into existence when Aghajanyan et al. (2020) showed that when adapting to specific tasks, the pre-trained **language** models have a **low** intrinsic dimension. Inspired by that, Edward Hu et al. (2021) suggest that the updates to the **weights** of an LLM also have a low "intrinsic **dimension**" during adaptation.
+
+For a given matrix weight $$W$$, and its update $$\Delta W$$, then mathematically:
+
+$$W + \Delta W = W + BA$$
+
+Where:
+- $$W: (d, k)$$
+- $$B: (d, r)$$
+- $$A: (r, k)$$
+- $$r << min(d,k):$$ the rank
+- $B, A$ represent the low rank adapters
+
+For the forward pass:
+$$(W +\Delta W) x = W x + BA x$$
+
 
 The fine-tuning techniques used in this repository include:
 
