@@ -76,8 +76,13 @@ Where:
 For the forward pass:
 $$(W +\Delta W) x = W x + BA x$$
 
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/menouarazib/llm/blob/3994d56878824fe42da0a341b189273f3275cd60/lora.gif" width="800">
+  
+[Edward Hu et al. (2021)]
+</h1><be>
+  
 
-The fine-tuning techniques used in this repository include:
 
 - [LoRA Adapter](https://huggingface.co/papers/2305.14314): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
 - [Flash Attention](https://huggingface.co/docs/text-generation-inference/conceptual/flash_attention): A novel attention mechanism that reduces the complexity of self-attention.
