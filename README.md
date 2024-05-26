@@ -57,7 +57,7 @@ The most well-known quantization methods are:
 [Olivia Weng]
 </h1><be>
 
-In our notebooks, we are using **QAT** quantization using **bitsandbytes**.
+In our notebooks, we are using **QAT** quantization using **bits and bytes**.
 
 ## LoRA
 For efficient **fine-tuning**, we are using the **Lasso** technique known as **LoRA** which focuses only on training the adapters rather than the entire model. These adapters are two low-rank matrices **A** and **B**. The idea came into existence when Aghajanyan et al. (2020) showed that when adapting to specific tasks, the pre-trained **language** models have a **low** intrinsic dimension. Inspired by that, Edward Hu et al. (2021) suggest that the updates to the **weights** of an LLM also have a low "intrinsic **dimension**" during adaptation.
@@ -71,7 +71,7 @@ Where:
 - $$B: (d, r)$$
 - $$A: (r, k)$$
 - $$r << min(d,k):$$ the rank
-- $B, A$ represent the low rank adapters
+- $B, A$ represent the low-rank adapters
 
 For the forward pass:
 $$(W +\Delta W) x = W x + BA x$$
@@ -81,7 +81,9 @@ $$(W +\Delta W) x = W x + BA x$$
   
 [Edward Hu et al. (2021)]
 </h1><be>
-  
+
+## Flash Attention
+This technique is used to compute the exact attention with IO-Awareness.
 
 
 - [LoRA Adapter](https://huggingface.co/papers/2305.14314): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
