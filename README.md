@@ -83,15 +83,24 @@ $$(W +\Delta W) x = W x + BA x$$
 </h1><be>
 
 ## Flash Attention
-This technique is used to compute the exact attention with IO-Awareness.
 
+Flash Attention is a technique used to accelerate the computation of attention.
+The standard attention algorithm can be decomposed as follows:
+- For each block of Q and K:
+    - Load the block from High Bandwidth Memory (HBM) to Static Random-Access Memory (SRAM).
+    - Compute the corresponding block of the similarity matrix S ($S = Q \times K^T$).
+    - Write the computed block of S to HBM.
+- For each block of S:
+    - Load the block from HBM to SRAM.
+    - Compute the corresponding block of P ($P = softmax(S)$).
+    - Write the computed block of P to HBM.
+- For each block of P and V:
+    - Load the block from HBM.
+    - Compute the corresponding block of O ($O = PV$).
+    - Write the computed block of O to HBM.
+      
+At the end of this process, S, P, and O are stored in HBM, resulting in a space complexity of $$O(N^2) + O(N \times d_{h})$$.
 
-- [LoRA Adapter](https://huggingface.co/papers/2305.14314): A technique that allows for efficient fine-tuning and parameter sharing across multiple tasks.
-- [Flash Attention](https://huggingface.co/docs/text-generation-inference/conceptual/flash_attention): A novel attention mechanism that reduces the complexity of self-attention.
-- [Quantization](https://huggingface.co/docs/transformers/main/en/quantization): A technique to reduce the memory footprint and improve the computational efficiency of the model.
-- [Train on Completions Only using DataCollatorForCompletionOnlyLM](https://huggingface.co/transformers/main_classes/data_collator.html): A specific data collator for language model pretraining.
-- [Using trl and the SFTTrainer](https://huggingface.co/docs/trl/sft_trainer)
-
-Stay tuned for updates as we continue to add more models and improve our fine-tuning and RAG techniques.
+However, Flash Attention differs in its approach: it doesn't store S, P, and O in HBM. Instead, it only stores O and the softmax normalization values. During the backward pass, it recomputes P and S based on O and the normalization values. This results in a more efficient use of memory and faster computations.
 
 **You can access my Hugging Face account [here](https://huggingface.co/Menouar).**
