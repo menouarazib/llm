@@ -103,4 +103,10 @@ At the end of this process, S, P, and O are stored in HBM, resulting in a space 
 
 However, Flash Attention differs in its approach: it doesn't store S, P, and O in HBM. Instead, it only stores O and the softmax normalization values. During the backward pass, it recomputes P and S based on O and the normalization values. This results in a more efficient use of memory and faster computations.
 
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/menouarazib/llm/b4fd49d81dbf49c13a2210ce106abb8615fdb92b/flashattn_banner.jpg" width="800">
+  
+[Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré]
+</h1><be>
+
 **You can access my Hugging Face account [here](https://huggingface.co/Menouar).**
